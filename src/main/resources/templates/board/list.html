@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="css/common.css" rel="stylesheet" />
 </head>
 <body>
     <header th:insert="common/header.html"></header>
-    <div>
-        hi hello
-    </div>
+    <div th:insert="common/sidebar.html"></div>
+    <table class="main_contents">
+        <tr>
+            <th>글 번호</th>
+            <th>제목</th>
+        </tr>
+        <tr th:each="BoardList, state : ${BoardList}">
+            <td>[[${state.index}]]</td>
+            <td>[[${BoardList.name}]]</td>
+        </tr>
+    </table>
 </body>
 </html>
