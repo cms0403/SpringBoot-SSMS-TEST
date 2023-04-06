@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul, li, ol {
+    list-style-type: none;
+}
+.main_contents {
+    display:inline-block;
+    width: 80%;
+    height: 1000px;
+    border: 1px solid green;
+    margin: 0 50px 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center
+}
+
+.main_contents td {
+    height: 50px;
+    line-height: 50px;
+}
